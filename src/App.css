@@ -2,20 +2,9 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
+  text-align: center;
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,16 +12,474 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.pokemon-card{
+  min-height: 30px;
+  min-width: 30px;
+  flex: 1 0 18%; 
+  margin: 10px;
+  background: grey;
+  border-radius: 20px;
+}
+.pokemon-card:hover{
+  color: yellow;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+#lista-views{
+  display: flex;
+  flex-wrap: wrap;
+}
+.middle-list-view{
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+}
+.pokemon-view{
+  height: 175px;
+  width: 175px;
+  margin: 10px;
+  background: grey;
+  border-radius: 20px;
+  border-color: white;
+  border-style: solid;
+  border-width: 4;
+}
+#pokemon-view-big{
+  height: 375px;
+  width: 375px;
+  margin: 10px;
+  background: grey;
+  border-radius: 20px;
+  border-color: white;
+  border-style: solid;
+  border-width: 4;
+}
+#lista-pokemons{
+  display: flex;
+  flex-wrap: wrap;
+}
+.pokemon-name:first-letter {
+  text-transform: uppercase;
+}
+.view-title{
+  font-size: 20px;
+  color: white;
+}
+/* Style the tab */
+.tab {
+  float: left;
+  background-color: #f1f1f1;
+  width: 20%;
+  height: 400px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+.tabcontent{
+    float: right;
+    width: 80%;
+    border-left: none;
+    height: 400px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.bar {
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 15px;
+}
+
+.bar-filler-hp {
+  height: 30px;
+  background-color: #FF0000;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  border-radius: 10px;
+}
+.bar-filler-attack {
+  height: 30px;
+  background-color: #F08030;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  border-radius: 10px;
+}
+.bar-filler-defense {
+  height: 30px;
+  background-color: #F8D030;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  border-radius: 10px;
+}
+.bar-filler-spattack {
+  height: 30px;
+  background-color: #6890F0;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  border-radius: 10px;
+}
+.bar-filler-spdefense {
+  height: 30px;
+  background-color: #78C850;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  border-radius: 10px;
+}
+.bar-filler-speed {
+  height: 30px;
+  background-color: #F85888;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  border-radius: 10px;
+}
+.bar-filler-total {
+  height: 30px;
+  background-color: #FAE078;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  border-radius: 10px;
+}
+.bar-title{
+  padding: 10px;
+}
+.bar-filler-1 {
+  width: 1%;
+}
+.bar-filler-2 {
+  width: 2%;
+}
+.bar-filler-3 {
+  width: 3%;
+}
+.bar-filler-4 {
+  width: 4%;
+}
+.bar-filler-5 {
+  width: 5%;
+}
+.bar-filler-6 {
+  width: 6%;
+}
+.bar-filler-7 {
+  width: 7%;
+}
+.bar-filler-8 {
+  width: 8%;
+}
+.bar-filler-9 {
+  width: 9%;
+}
+.bar-filler-10 {
+  width: 10%;
+}
+.bar-filler-11 {
+  width: 11%;
+}
+.bar-filler-12 {
+  width: 12%;
+}
+.bar-filler-13 {
+  width: 13%;
+}
+.bar-filler-14 {
+  width: 14%;
+}
+.bar-filler-15 {
+  width: 15%;
+}
+.bar-filler-16 {
+  width: 16%;
+}
+.bar-filler-17 {
+  width: 17%;
+}
+.bar-filler-18 {
+  width: 18%;
+}
+.bar-filler-19 {
+  width: 19%;
+}
+.bar-filler-20 {
+  width: 20%;
+}
+.bar-filler-21 {
+  width: 21%;
+}
+.bar-filler-22 {
+  width: 22%;
+}
+.bar-filler-23 {
+  width: 23%;
+}
+.bar-filler-24 {
+  width: 24%;
+}
+.bar-filler-25 {
+  width: 25%;
+}
+.bar-filler-26 {
+  width: 26%;
+}
+.bar-filler-27 {
+  width: 27%;
+}
+.bar-filler-28 {
+  width: 28%;
+}
+.bar-filler-29 {
+  width: 29%;
+}
+.bar-filler-30 {
+  width: 30%;
+}
+.bar-filler-31 {
+  width: 31%;
+}
+.bar-filler-32 {
+  width: 32%;
+}
+.bar-filler-33 {
+  width: 33%;
+}
+.bar-filler-34 {
+  width: 34%;
+}
+.bar-filler-35 {
+  width: 35%;
+}
+.bar-filler-36 {
+  width: 36%;
+}
+.bar-filler-37 {
+  width: 37%;
+}
+.bar-filler-38 {
+  width: 38%;
+}
+.bar-filler-39 {
+  width: 39%;
+}
+.bar-filler-40 {
+  width: 40%;
+}
+.bar-filler-41 {
+  width: 41%;
+}
+.bar-filler-42 {
+  width: 42%;
+}
+.bar-filler-43 {
+  width: 43%;
+}
+.bar-filler-44 {
+  width: 44%;
+}
+.bar-filler-45 {
+  width: 45%;
+}
+.bar-filler-46 {
+  width: 46%;
+}
+.bar-filler-47 {
+  width: 47%;
+}
+.bar-filler-48 {
+  width: 48%;
+}
+.bar-filler-49 {
+  width: 49%;
+}
+.bar-filler-50 {
+  width: 50%;
+}
+.bar-filler-51 {
+  width: 51%;
+}
+.bar-filler-52 {
+  width: 52%;
+}
+.bar-filler-53 {
+  width: 53%;
+}
+.bar-filler-54 {
+  width: 54%;
+}
+.bar-filler-55 {
+  width: 55%;
+}
+.bar-filler-56 {
+  width: 56%;
+}
+.bar-filler-57 {
+  width: 57%;
+}
+.bar-filler-58 {
+  width: 58%;
+}
+.bar-filler-59 {
+  width: 59%;
+}
+.bar-filler-60 {
+  width: 60%;
+}
+.bar-filler-61 {
+  width: 61%;
+}
+.bar-filler-62 {
+  width: 62%;
+}
+.bar-filler-63 {
+  width: 63%;
+}
+.bar-filler-64 {
+  width: 64%;
+}
+.bar-filler-65 {
+  width: 65%;
+}
+.bar-filler-66 {
+  width: 66%;
+}
+.bar-filler-67 {
+  width: 67%;
+}
+.bar-filler-68 {
+  width: 68%;
+}
+.bar-filler-69 {
+  width: 69%;
+}
+.bar-filler-70 {
+  width: 70%;
+}
+.bar-filler-71 {
+  width: 71%;
+}
+.bar-filler-72 {
+  width: 72%;
+}
+.bar-filler-73 {
+  width: 73%;
+}
+.bar-filler-74 {
+  width: 74%;
+}
+.bar-filler-75 {
+  width: 75%;
+}
+.bar-filler-76 {
+  width: 76%;
+}
+.bar-filler-77 {
+  width: 77%;
+}
+.bar-filler-78 {
+  width: 78%;
+}
+.bar-filler-79 {
+  width: 79%;
+}
+.bar-filler-80 {
+  width: 80%;
+}
+.bar-filler-81 {
+  width: 81%;
+}
+.bar-filler-82 {
+  width: 82%;
+}
+.bar-filler-83 {
+  width: 83%;
+}
+.bar-filler-84 {
+  width: 84%;
+}
+.bar-filler-85 {
+  width: 85%;
+}
+.bar-filler-86 {
+  width: 86%;
+}
+.bar-filler-87 {
+  width: 87%;
+}
+.bar-filler-88 {
+  width: 88%;
+}
+.bar-filler-89 {
+  width: 89%;
+}
+.bar-filler-90 {
+  width: 90%;
+}
+.bar-filler-91 {
+  width: 91%;
+}
+.bar-filler-92 {
+  width: 92%;
+}
+.bar-filler-93 {
+  width: 93%;
+}
+.bar-filler-94 {
+  width: 94%;
+}
+.bar-filler-95 {
+  width: 95%;
+}
+.bar-filler-96 {
+  width: 96%;
+}
+.bar-filler-97 {
+  width: 97%;
+}
+.bar-filler-98 {
+  width: 98%;
+}
+.bar-filler-99 {
+  width: 99%;
+}
+.bar-filler-100 {
+  width: 100%;
 }
