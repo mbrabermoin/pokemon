@@ -58,6 +58,7 @@ export default class PokemonCard extends React.Component {
     }
     document.getElementById("main").className += " active";
   }
+  
   openStats = () => {
     this.setState({ tabOpen: "stats" })
     var i, tablinks;
