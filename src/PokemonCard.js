@@ -33,8 +33,8 @@ export default class PokemonCard extends React.Component {
   componentDidMount() {
     axios.get(this.props.pokemon)
       .then(res => {
-        console.log(res.data)
         let abilities = res.data.abilities;
+        console.log(this.props.pokemon)
         this.setState({
           abilities: abilities, forms: res.data.forms, game_indices: res.data.game_indices, height: res.data.height, id: res.data.id, image: res.data.sprites.front_default,
           is_default: res.data.is_default, moves: res.data.moves, order: res.data.order, species: res.data.species, sprites: res.data.sprites, stats: res.data.stats, types: res.data.types, weight: res.data.weight
@@ -45,7 +45,7 @@ export default class PokemonCard extends React.Component {
     this.setState({ detailsOpen: false })
   }
   handleOpenDetails = () => {
-    this.setState({ detailsOpen: true })
+    this.setState({ detailsOpen: true })    
     setTimeout(function () { document.getElementById("main").className += " active"; }, 10);
 
   }
@@ -98,7 +98,7 @@ export default class PokemonCard extends React.Component {
   render() {
     var tabContent = "";
     if (this.state.tabOpen === "main") {
-      tabContent = <PokemonCardMain ></PokemonCardMain>
+      tabContent = <PokemonCardMain species={this.state.species} image={this.state.image}></PokemonCardMain>
     } else {
       if (this.state.tabOpen === "stats") {
         tabContent = <PokemonStats stats={this.state.stats}></PokemonStats>
